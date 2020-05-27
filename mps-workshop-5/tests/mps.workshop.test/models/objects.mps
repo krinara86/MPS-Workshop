@@ -79,6 +79,10 @@
         <ref role="3QE9kY" node="7X0VHIfRrRw" resolve="SuperExample" />
       </node>
     </node>
+    <node concept="Z5QLA" id="54NBwg_tC8g" role="Z5QLy">
+      <property role="TrG5h" value="field2" />
+      <node concept="3KzAiw" id="54NBwg_tC8x" role="Z5QLV" />
+    </node>
   </node>
   <node concept="1FP7Vj" id="7X0VHIfRrTt">
     <property role="TrG5h" value="SampleForClasses" />

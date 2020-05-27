@@ -2,10 +2,11 @@
 <model ref="r:785e663c-34fd-44b8-8de2-21ec75850c6f(mps.workshop.sm.lang.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="12" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="13" />
     <use id="9d69e719-78c8-4286-90db-fb19c107d049" name="com.mbeddr.mpsutil.grammarcells" version="0" />
     <use id="7e450f4e-1ac3-41ef-a851-4598161bdb94" name="de.slisson.mps.tables" version="0" />
     <use id="fa13cc63-c476-4d46-9c96-d53670abe7bc" name="de.itemis.mps.editor.diagram" version="0" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="9" />
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   </languages>
   <imports>
@@ -190,11 +191,8 @@
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
       <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
@@ -417,6 +415,14 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -884,13 +890,80 @@
                 <node concept="3clFbJ" id="2M7NXgi6URi" role="3cqZAp">
                   <node concept="3clFbS" id="2M7NXgi6URj" role="3clFbx">
                     <node concept="3SKdUt" id="20mUbtbzHav" role="3cqZAp">
-                      <node concept="3SKdUq" id="20mUbtbzHax" role="3SKWNk">
-                        <property role="3SKdUp" value="there is nothing yet in the cell, and we also did not select anything from " />
+                      <node concept="1PaTwC" id="I5Ge6adyY_" role="3ndbpf">
+                        <node concept="3oM_SD" id="I5Ge6adyYA" role="1PaTwD">
+                          <property role="3oM_SC" value="there" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYB" role="1PaTwD">
+                          <property role="3oM_SC" value="is" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYC" role="1PaTwD">
+                          <property role="3oM_SC" value="nothing" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYD" role="1PaTwD">
+                          <property role="3oM_SC" value="yet" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYE" role="1PaTwD">
+                          <property role="3oM_SC" value="in" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYF" role="1PaTwD">
+                          <property role="3oM_SC" value="the" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYG" role="1PaTwD">
+                          <property role="3oM_SC" value="cell," />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYH" role="1PaTwD">
+                          <property role="3oM_SC" value="and" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYI" role="1PaTwD">
+                          <property role="3oM_SC" value="we" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYJ" role="1PaTwD">
+                          <property role="3oM_SC" value="also" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYK" role="1PaTwD">
+                          <property role="3oM_SC" value="did" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYL" role="1PaTwD">
+                          <property role="3oM_SC" value="not" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYM" role="1PaTwD">
+                          <property role="3oM_SC" value="select" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYN" role="1PaTwD">
+                          <property role="3oM_SC" value="anything" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYO" role="1PaTwD">
+                          <property role="3oM_SC" value="from" />
+                        </node>
                       </node>
                     </node>
                     <node concept="3SKdUt" id="20mUbtbzJtV" role="3cqZAp">
-                      <node concept="3SKdUq" id="20mUbtbzJtX" role="3SKWNk">
-                        <property role="3SKdUp" value="the code completion menu. The user pressed ENTER. " />
+                      <node concept="1PaTwC" id="I5Ge6adyYP" role="3ndbpf">
+                        <node concept="3oM_SD" id="I5Ge6adyYQ" role="1PaTwD">
+                          <property role="3oM_SC" value="the" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYR" role="1PaTwD">
+                          <property role="3oM_SC" value="code" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYS" role="1PaTwD">
+                          <property role="3oM_SC" value="completion" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYT" role="1PaTwD">
+                          <property role="3oM_SC" value="menu." />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYU" role="1PaTwD">
+                          <property role="3oM_SC" value="The" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYV" role="1PaTwD">
+                          <property role="3oM_SC" value="user" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYW" role="1PaTwD">
+                          <property role="3oM_SC" value="pressed" />
+                        </node>
+                        <node concept="3oM_SD" id="I5Ge6adyYX" role="1PaTwD">
+                          <property role="3oM_SC" value="ENTER." />
+                        </node>
                       </node>
                     </node>
                     <node concept="3clFbF" id="2M7NXgi6URk" role="3cqZAp">
@@ -939,8 +1012,46 @@
                   <node concept="3eNFk2" id="2M7NXgi6URz" role="3eNLev">
                     <node concept="3clFbS" id="2M7NXgi6UR$" role="3eOfB_">
                       <node concept="3SKdUt" id="20mUbtbzNQs" role="3cqZAp">
-                        <node concept="3SKdUq" id="20mUbtbzNQu" role="3SKWNk">
-                          <property role="3SKdUp" value="there is nothing in the cell, but we selected something from the menu" />
+                        <node concept="1PaTwC" id="I5Ge6adyYY" role="3ndbpf">
+                          <node concept="3oM_SD" id="I5Ge6adyYZ" role="1PaTwD">
+                            <property role="3oM_SC" value="there" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ0" role="1PaTwD">
+                            <property role="3oM_SC" value="is" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ1" role="1PaTwD">
+                            <property role="3oM_SC" value="nothing" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ2" role="1PaTwD">
+                            <property role="3oM_SC" value="in" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ3" role="1PaTwD">
+                            <property role="3oM_SC" value="the" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ4" role="1PaTwD">
+                            <property role="3oM_SC" value="cell," />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ5" role="1PaTwD">
+                            <property role="3oM_SC" value="but" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ6" role="1PaTwD">
+                            <property role="3oM_SC" value="we" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ7" role="1PaTwD">
+                            <property role="3oM_SC" value="selected" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ8" role="1PaTwD">
+                            <property role="3oM_SC" value="something" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ9" role="1PaTwD">
+                            <property role="3oM_SC" value="from" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZa" role="1PaTwD">
+                            <property role="3oM_SC" value="the" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZb" role="1PaTwD">
+                            <property role="3oM_SC" value="menu" />
+                          </node>
                         </node>
                       </node>
                       <node concept="3clFbF" id="2M7NXgi6UR_" role="3cqZAp">
@@ -993,8 +1104,43 @@
                     </node>
                     <node concept="3clFbS" id="2M7NXgi6URX" role="3eOfB_">
                       <node concept="3SKdUt" id="20mUbtbzPBF" role="3cqZAp">
-                        <node concept="3SKdUq" id="20mUbtbzPBH" role="3SKWNk">
-                          <property role="3SKdUp" value="there is something in the cell, and we delete the existing value" />
+                        <node concept="1PaTwC" id="I5Ge6adyZc" role="3ndbpf">
+                          <node concept="3oM_SD" id="I5Ge6adyZd" role="1PaTwD">
+                            <property role="3oM_SC" value="there" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZe" role="1PaTwD">
+                            <property role="3oM_SC" value="is" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZf" role="1PaTwD">
+                            <property role="3oM_SC" value="something" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZg" role="1PaTwD">
+                            <property role="3oM_SC" value="in" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZh" role="1PaTwD">
+                            <property role="3oM_SC" value="the" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZi" role="1PaTwD">
+                            <property role="3oM_SC" value="cell," />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZj" role="1PaTwD">
+                            <property role="3oM_SC" value="and" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZk" role="1PaTwD">
+                            <property role="3oM_SC" value="we" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZl" role="1PaTwD">
+                            <property role="3oM_SC" value="delete" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZm" role="1PaTwD">
+                            <property role="3oM_SC" value="the" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZn" role="1PaTwD">
+                            <property role="3oM_SC" value="existing" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZo" role="1PaTwD">
+                            <property role="3oM_SC" value="value" />
+                          </node>
                         </node>
                       </node>
                       <node concept="3clFbF" id="2M7NXgi6URY" role="3cqZAp">
@@ -1017,8 +1163,49 @@
                   <node concept="9aQIb" id="2M7NXgi6US5" role="9aQIa">
                     <node concept="3clFbS" id="2M7NXgi6US6" role="9aQI4">
                       <node concept="3SKdUt" id="20mUbtbzSiv" role="3cqZAp">
-                        <node concept="3SKdUq" id="20mUbtbzSix" role="3SKWNk">
-                          <property role="3SKdUp" value="there is something in the cell, and we update it with a new value" />
+                        <node concept="1PaTwC" id="I5Ge6adyZp" role="3ndbpf">
+                          <node concept="3oM_SD" id="I5Ge6adyZq" role="1PaTwD">
+                            <property role="3oM_SC" value="there" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZr" role="1PaTwD">
+                            <property role="3oM_SC" value="is" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZs" role="1PaTwD">
+                            <property role="3oM_SC" value="something" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZt" role="1PaTwD">
+                            <property role="3oM_SC" value="in" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZu" role="1PaTwD">
+                            <property role="3oM_SC" value="the" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZv" role="1PaTwD">
+                            <property role="3oM_SC" value="cell," />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZw" role="1PaTwD">
+                            <property role="3oM_SC" value="and" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZx" role="1PaTwD">
+                            <property role="3oM_SC" value="we" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZy" role="1PaTwD">
+                            <property role="3oM_SC" value="update" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZz" role="1PaTwD">
+                            <property role="3oM_SC" value="it" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ$" role="1PaTwD">
+                            <property role="3oM_SC" value="with" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZ_" role="1PaTwD">
+                            <property role="3oM_SC" value="a" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZA" role="1PaTwD">
+                            <property role="3oM_SC" value="new" />
+                          </node>
+                          <node concept="3oM_SD" id="I5Ge6adyZB" role="1PaTwD">
+                            <property role="3oM_SC" value="value" />
+                          </node>
                         </node>
                       </node>
                       <node concept="3clFbF" id="2M7NXgi6US7" role="3cqZAp">
@@ -1078,7 +1265,7 @@
                     <node concept="1OKiuA" id="fcvYn5fvf$" role="2OqNvi">
                       <node concept="1frAZD" id="fcvYn5fwL4" role="lBI5i" />
                       <node concept="2B6iha" id="fcvYn5lsGU" role="lGT1i">
-                        <property role="1lyBwo" value="lastEditable" />
+                        <property role="1lyBwo" value="1S2pyLby17D/lastEditable" />
                       </node>
                     </node>
                   </node>
@@ -1096,7 +1283,7 @@
               <property role="2rfbtB" value="Events" />
               <node concept="1g0IQG" id="1zEStSSOFuI" role="1geGt4">
                 <node concept="Qq2$L" id="1zEStSSOFuM" role="3F10Kt">
-                  <property role="Qq2$K" value="CENTER" />
+                  <property role="Qq2$K" value="3NocqOaFOpk/CENTER" />
                 </node>
                 <node concept="3hWdWw" id="1zEStSSOFvp" role="3F10Kt">
                   <node concept="3hZEK$" id="1zEStSSOFvq" role="3hZOwg">
@@ -1226,7 +1413,7 @@
                     <property role="3hSBKY" value="3" />
                   </node>
                   <node concept="3hWdHu" id="kJtP4Gyf0j" role="3F10Kt">
-                    <property role="Vb096" value="darkGray" />
+                    <property role="Vb096" value="fLJRk5B/darkGray" />
                   </node>
                   <node concept="3hWdWw" id="1zEStSSOFvE" role="3F10Kt">
                     <node concept="3hZEK$" id="1zEStSSOFvF" role="3hZOwg">
@@ -1343,7 +1530,7 @@
               <property role="2rfbtB" value="States" />
               <node concept="1g0IQG" id="1zEStSSOFuQ" role="1geGt4">
                 <node concept="QtRvh" id="1zEStSSOFuU" role="3F10Kt">
-                  <property role="QtXtZ" value="CENTER" />
+                  <property role="QtXtZ" value="3NocqOaFOoT/CENTER" />
                 </node>
                 <node concept="3hWdWw" id="1zEStSSOFv5" role="3F10Kt">
                   <node concept="3hZEK$" id="1zEStSSOFvd" role="3hZOwg">
@@ -1470,13 +1657,13 @@
                 </node>
                 <node concept="1g0IQG" id="kJtP4Gyh$R" role="1geGt4">
                   <node concept="3hWdL3" id="kJtP4GzWP4" role="3F10Kt">
-                    <property role="Vb096" value="darkGray" />
+                    <property role="Vb096" value="fLJRk5B/darkGray" />
                   </node>
                   <node concept="3hShXA" id="kJtP4GzZqn" role="3F10Kt">
                     <property role="3hSBKY" value="3" />
                   </node>
                   <node concept="3hWdWw" id="kJtP4Gyi2n" role="3F10Kt">
-                    <property role="Vb096" value="lightGray" />
+                    <property role="Vb096" value="fLJRk5A/lightGray" />
                     <node concept="3hZEK$" id="1zEStSSOFxq" role="3hZOwg">
                       <property role="3hZETZ" value="00000022" />
                     </node>

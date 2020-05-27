@@ -2,7 +2,7 @@
 <model ref="r:c19cd020-350f-4eb2-a853-25f30557221d(main@generator)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="12" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="13" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
@@ -144,6 +144,7 @@
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1966870290083281362" name="jetbrains.mps.lang.smodel.structure.EnumMember_NameOperation" flags="ng" index="24Tkf9" />
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
@@ -262,10 +263,13 @@
                                     <node concept="3$xsQk" id="b$OkqhpNTi" role="3$ytzL">
                                       <node concept="3clFbS" id="b$OkqhpNTj" role="2VODD2">
                                         <node concept="3cpWs6" id="b$OkqhpOxI" role="3cqZAp">
-                                          <node concept="2OqwBi" id="b$OkqhpRfC" role="3cqZAk">
-                                            <node concept="30H73N" id="b$OkqhpOG_" role="2Oq$k0" />
-                                            <node concept="3TrcHB" id="b$OkqhpUBp" role="2OqNvi">
-                                              <ref role="3TsBF5" to="vido:b$OkqhlFg_" resolve="color" />
+                                          <node concept="2OqwBi" id="I5Ge6adyHt" role="3cqZAk">
+                                            <node concept="24Tkf9" id="I5Ge6adyHv" role="2OqNvi" />
+                                            <node concept="2OqwBi" id="b$OkqhpRfC" role="2Oq$k0">
+                                              <node concept="30H73N" id="b$OkqhpOG_" role="2Oq$k0" />
+                                              <node concept="3TrcHB" id="b$OkqhpUBp" role="2OqNvi">
+                                                <ref role="3TsBF5" to="vido:I5Ge6adyCE" resolve="color" />
+                                              </node>
                                             </node>
                                           </node>
                                         </node>

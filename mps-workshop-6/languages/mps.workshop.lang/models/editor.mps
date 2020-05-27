@@ -2,9 +2,8 @@
 <model ref="r:5a9841d8-363a-4715-80dd-8fd649ae116b(mps.workshop.lang.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="12" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="13" />
     <use id="9d69e719-78c8-4286-90db-fb19c107d049" name="com.mbeddr.mpsutil.grammarcells" version="0" />
-    <use id="378e5de9-c927-48a3-84ee-c9546f8586e0" name="mps.workshop.editor.lang" version="0" />
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   </languages>
   <imports>
@@ -214,7 +213,7 @@
       </node>
       <node concept="2jGtU7" id="b$OkqhlMjj" role="3EZMnx">
         <property role="2jGA3M" value="3" />
-        <property role="2jGAlz" value="BLUE" />
+        <property role="2jGAlz" value="b$OkqhlFgu/BLUE" />
         <node concept="pVoyu" id="b$OkqhlOvZ" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -391,7 +390,7 @@
         <node concept="3F0ifn" id="5jmmCdx$f6s" role="3EZMnx">
           <property role="3F0ifm" value="&quot;" />
           <node concept="Vb9p2" id="sflsE7mPpA" role="3F10Kt">
-            <property role="Vbekb" value="BOLD" />
+            <property role="Vbekb" value="g1_k_vY/BOLD" />
           </node>
           <node concept="11L4FC" id="5jmmCdx$f6t" role="3F10Kt">
             <property role="VOm3f" value="true" />
